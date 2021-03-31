@@ -1,0 +1,35 @@
+---
+- title: senha incorreta
+  payload:
+    email: teste@teste.com.br
+    password: '12345'
+  code: 401
+  error: Unauthorized
+- title: usuario não existe
+  payload:
+    email: 404@teste.com.br
+    password: '12345'
+  code: 401
+  error: Unauthorized
+- title: email em branco
+  payload:
+    email: ''
+    password: '12345'
+  code: 412
+  error: required email
+- title: usuario em branco
+  payload:
+    password: '12345'
+  code: 412
+  error: required email
+- title: senha em branco
+  payload:
+    email: teste@teste.com.br
+    password: ''
+  code: 412
+  error: required password
+- title: senha nulo
+  payload:
+    email: teste@teste.com.br
+  code: 412
+  error: required password
